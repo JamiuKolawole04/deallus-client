@@ -1,8 +1,14 @@
 .acc__type {
-    border: 1.5px solid rgba(220, 229, 241, 0.6);
-    padding: 12px 72px 16px 12px;
+    border: 1px solid rgba(220, 229, 241, 0.6);
+    padding: 24px 80px 40px 28px;
     border-radius: 4px;
+    transition: transform .8s;
 
+}
+
+.acc__type:hover {
+    border: 2px solid #0B3FA8;
+    transform: scale(1.03);
 }
 
 .acc__type a>img:nth-of-type(2) {
@@ -24,6 +30,6 @@
 p.acc__select {
     font-size: 14px;
     color: #2E394B;
-    margin-top: 40px;
+    margin-top: 64px;
     margin-bottom: 40px;
 }

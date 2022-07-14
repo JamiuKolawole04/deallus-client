@@ -21,6 +21,7 @@ const SignupNewStaff = () => {
                                 name="firstname"
                                 icon1={userSignup1}
                                 placeholder="Oluwatobi"
+                                isIcon
                             />
                         </div>
 
@@ -30,6 +31,7 @@ const SignupNewStaff = () => {
                                 name="lastname"
                                 icon1={userSignup2}
                                 placeholder="Last name"
+                                isIcon
                             />
                         </div>
 
@@ -40,6 +42,7 @@ const SignupNewStaff = () => {
                             name="email"
                             icon1={email}
                             placeholder="Email"
+                            isIcon
                         />
                     </div>
                     <div className="mt-28">
@@ -49,7 +52,8 @@ const SignupNewStaff = () => {
                             icon1={password}
                             icon2={view}
                             placeholder="Choose a password"
-                            modify
+                            isModify
+                            isIcon
                         />
                     </div>
                     <div className="mt-48">

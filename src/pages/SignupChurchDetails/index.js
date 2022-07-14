@@ -19,7 +19,8 @@ const SignupChurchDetails = () => {
                         icon1={churchHandle}
                         icon2={complete}
                         placeholder="DeallusChurch"
-                        modify
+                        isModify
+                        isIcon
                     />
                     <div className="d-flex align-items-center row church__info" >
                         <img src={founder} alt="" />

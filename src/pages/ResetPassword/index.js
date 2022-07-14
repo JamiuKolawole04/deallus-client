@@ -15,8 +15,9 @@ const ResetPassword = () => {
                         name="password"
                         icon1={password}
                         icon2={view}
-                        modify
+                        isModify
                         placeholder="New password"
+                        isIcon
                     />
                     <div className="mt-28 mb-48">
                         <Input
@@ -24,8 +25,9 @@ const ResetPassword = () => {
                             name="password"
                             icon1={password}
                             icon2={view}
-                            modify
+                            isModify
                             placeholder="Confirm new password"
+                            isIcon
                         />
                     </div>
                     <Button

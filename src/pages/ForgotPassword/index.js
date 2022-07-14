@@ -15,6 +15,7 @@ const ForgotPassword = () => {
                             name="email"
                             icon1={email}
                             placeholder="Email address"
+                            isIcon
                         />
                     </div>
 

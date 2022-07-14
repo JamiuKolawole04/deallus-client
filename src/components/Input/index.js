@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-const Input = ({ type, name, icon1, icon2, modify, placeholder }) => {
+const Input = ({ type, name, icon1, icon2, isModify, placeholder, isIcon }) => {
     const [credentials, setCredentials] = useState({
         number: undefined,
         password: undefined,
@@ -17,11 +17,15 @@ const Input = ({ type, name, icon1, icon2, modify, placeholder }) => {
     }
 
     const icon1Width = {
-        width: modify ? "12px" : "16px"
+        width: isModify ? "12px" : "16px"
     }
 
     const icon2Width = {
-        width: modify ? "18px" : "12px"
+        width: isModify ? "18px" : "12px"
+    }
+
+    const inputStyle = {
+        paddingLeft: isIcon ? "60px" : "20px"
     }
 
 
@@ -32,6 +36,7 @@ const Input = ({ type, name, icon1, icon2, modify, placeholder }) => {
                 <img style={icon1Width} src={icon1} alt="" />
             </button>
             <input
+                style={inputStyle}
                 type={type}
                 name={name}
                 id={name}

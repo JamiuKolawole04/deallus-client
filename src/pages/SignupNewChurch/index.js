@@ -28,6 +28,7 @@ const SignupNewChurch = () => {
                         icon1={home}
                         icon2={cancel}
                         placeholder="Church name"
+                        isIcon
                     />
                     <div className="mt-28">
                         <Input
@@ -35,7 +36,8 @@ const SignupNewChurch = () => {
                             name="email"
                             icon1={email}
                             placeholder="Church email address"
-                            modify
+                            isModify
+                            isIcon
                         />
                     </div>
                     <div className="mt-28">
@@ -44,7 +46,8 @@ const SignupNewChurch = () => {
                             name="handle"
                             icon1={churchHandle}
                             placeholder="Church handle"
-                            modify
+                            isModify
+                            isIcon
                         />
                     </div>
 
@@ -55,7 +58,8 @@ const SignupNewChurch = () => {
                             icon2={view}
                             icon1={password}
                             placeholder="Choose a password for your church"
-                            modify
+                            isModify
+                            isIcon
                         />
                     </div>
 
@@ -65,6 +69,7 @@ const SignupNewChurch = () => {
                         name="referral"
                         icon1={referral}
                         placeholder="Enter referral ID"
+                        isIcon
                     />
                     <div className="mt-48">
                         <Button

@@ -18,6 +18,7 @@ const Home = () => {
                         name="number"
                         icon1={user}
                         icon2={cancel}
+                        isIcon
                         placeholder="+234 000 000 000"
                     />
                     <div className="mt-28 mb-48">
@@ -26,8 +27,10 @@ const Home = () => {
                             name="password"
                             icon1={password}
                             icon2={view}
-                            modify
+                            isModify
+                            isIcon
                             placeholder="Enter password"
+
                         />
                     </div>
 
