@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Product Sans";
+    src: url("./asset/fonts/product-sans/Product\ Sans\ Regular.woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Product Sans";
+    src: url("./asset/fonts/product-sans/Product\ Sans\ Bold.woff2");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Circular Std";
+    src: url("./asset/fonts/Circular-Std-Font/Circular\ Std\ Font.woff2");
+}
+
+:root {
+    --col1: #ffffff;
+    --col2: #0B3FA8;
+    --col3: #64758F;
+    --col4: #5F7CA8;
+    --sans: "Product Sans";
+    --std: "Circular Std";
+    --mainTransition: all 0.3s linear;
+}
+
+body {
+    background-color: #f6f9ff;
+}
+
+/* GLOBAL STYLE
+================================== ============================================*/
+@import url("./global.css");
+
+/* HEADER 
+================================== ============================================*/
+@import url("./components/Header/styles/header.css");
+
+/* HOME
+================================ ================================================*/
+@import url("./pages/Home/style/home.css");
+
+/* FOOTER
+=============================== ==================================================*/
+@import url("./components/Footer/style/footer.css");
+
+/* INPUT
+================================ ===================================================*/
+@import url("./components/Input/style/input.css");
+
+/* SIGN UP
+=============================== =====================================================*/
+@import url("./pages/Signup/style/signup.css");
+
+button {
+    color: var(--col1);
+    text-align: center;
+    height: 40px;
+    font-size: 14px;
+    font-family: var(--sans);
+    line-height: 24px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+p#referral_id {
+    font-size: 12px;
+    font-family: var(--sans);
+    line-height: 22px;
+    color: #052949;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+div#members__info {
+    margin-top: 8px;
+}
+
+div#members__info p {
+    left: 358px;
+    background-color: #FE8F29;
+    border-radius: 6px 0 0 6px;
+    width: 180px;
+    color: var(--col1);
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 700;
+    padding: 14px 0 14px 12px;
+}
+
+p#church__handle {
+    color: #53565C;
+    line-height: 22px;
+    font-family: var(--sans);
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.church__info {
+    border: 1px solid rgba(220, 229, 241, 0.6);
+    margin-top: 36px;
+    margin-bottom: 52px;
+}
+
+.church__info img {
+    width: 140px;
+}
+
+.church__info>div>p:nth-of-type(1),
+.church__info>div>p:nth-of-type(2) {
+    font-weight: 700;
+    font-family: var(--sans);
+}
+
+.church__info>div>p:nth-of-type(1) {
+    color: #062460;
+    line-height: 32px;
+    font-size: 16px;
+}
+
+.church__info>div>p:nth-of-type(2) {
+    color: #1A4165;
+    line-height: 12px;
+    font-family: var(--sans);
+    font-size: 12px;
+}
+
+.church__info>div>address {
+    font-style: normal;
+    line-height: 24px;
+    color: #1A4165;
+    font-size: 12px;
+}
+
+.sucess-msg__container img {
+    margin-top: 120px;
+    width: 80px;
+}
+
+.sucess-msg__container>div>p:first-of-type {
+    color: #24457A;
+}
+
+span.usermail {
+    color: var(--col2);
+}
+
+.church-plans__container p.plans__text {
+    color: #162338;
+    font-family: var(--sans);
+    margin-top: 80px;
+    font-size: 28px;
+    line-height: 49px;
+}
+
+.church-plans__container p.plans__subtext {
+    color: #7A8BA6;
+    font-family: var(--sans);
+    font-size: 16px;
+}
+
+.church-plans__container>div {
+    width: 100%;
+    max-width: 1020px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    ;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+/* padding: 0 0 0 20px; */
+.church-plans__container>div>div {
+    background-color: var(--col1);
+    width: 457px;
+    height: 527px;
+    font-family: var(--sans);
+}
+
+.church-plans__container>div>div>div:first-of-type,
+.church-plans__container>div>div>div:nth-of-type(3) {
+    padding: 40px;
+}
+
+
+.border {
+    border-bottom: 2px solid red;
+}

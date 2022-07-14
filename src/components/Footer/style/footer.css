@@ -1,0 +1,89 @@
+footer {
+    background-image: url("../../../asset/img/congregation.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 700px;
+    position: relative;
+    margin-top: 60px;
+    color: white;
+    opacity: 1;
+}
+
+footer .ft__overlay {
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    background-color: var(--col2);
+    bottom: 0px;
+    opacity: 0.9;
+    z-index: 1;
+    padding-top: 120px;
+}
+
+
+footer .ft__content {
+    margin: 0 auto 90px auto;
+    max-width: 1080px;
+    width: 100%;
+}
+
+ul>li:first-of-type {
+    text-transform: uppercase;
+    font-family: var(--sans);
+    font-size: 14px;
+}
+
+footer .ft__content>div:nth-of-type(1) {
+    margin-top: 100px;
+}
+
+
+footer .ft__content ul a {
+    color: #D1E0FD;
+    font-family: var(--sans);
+    font-size: 12px;
+}
+
+footer .ft__content ul a li {
+    padding-bottom: 20px;
+}
+
+li.about {
+    margin-top: -40px;
+}
+
+footer .ft__content>img {
+    width: 140px;
+}
+
+footer .copyright p {
+    display: inline-block;
+}
+
+footer .copyright {
+    /* border-top: 1px solid black; */
+    border-top: 1px solid rgba(220, 229, 241, 0.6);
+}
+
+footer .copyright>div {
+    margin: 20px 10px 0 80px;
+    /* max-width: 800px; */
+}
+
+footer .copyright>div p {
+    color: #F5F9FF;
+    font-size: 14px;
+    line-height: 32px;
+    font-family: var(--sans);
+    padding: 0 8px 0 8px;
+}
+
+.media__link ul a {
+    padding-left: 8px;
+    padding-right: 12px;
+}
+
+.media__link ul a img {
+    width: 28px;
+}

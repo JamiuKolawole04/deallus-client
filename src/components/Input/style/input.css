@@ -1,0 +1,52 @@
+.input {
+    position: relative;
+}
+
+.input>button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    height: 32px;
+    padding: 0;
+    position: absolute;
+    margin-left: 20px;
+}
+
+.input>button:first-of-type {
+    width: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input>button:first-of-type>img {
+    width: 16px;
+}
+
+.input>button:nth-of-type(2)>img {
+    width: 12px;
+}
+
+.input>button:nth-of-type(2) {
+    right: 32px;
+}
+
+.input>input {
+    background-color: var(--col1);
+    color: var(--col2);
+    border: 1.5px solid rgba(220, 229, 241, 0.6);
+    transition: width 0.5s;
+    height: 16px;
+    font-size: 12px;
+    border-radius: 4px;
+    padding: 24px 20px 24px 60px;
+    opacity: 1;
+    width: 100%;
+    outline: none;
+}
+
+.input>input:focus {
+    border-color: var(--col2);
+}
