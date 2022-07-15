@@ -7,4 +7,3 @@ export { default as Footer } from "./Footer";
 export { default as Input } from "./Input";
 export { default as AccountType } from "./AccountType";
 export { default as SelectPlan } from "./SelectPlan";
-

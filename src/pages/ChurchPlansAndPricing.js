@@ -9,6 +9,11 @@ export const ChurchPlansAndPricing = () => {
             <div>
                 <SelectPlan />
                 <SelectPlan />
+                <SelectPlan />
+                <SelectPlan />
+                <SelectPlan />
+                <SelectPlan />
+                <SelectPlan />
                 {/* <div>
                     <div className="d-flex justify-content-between">
                         <p>Congregation size up to 100</p>

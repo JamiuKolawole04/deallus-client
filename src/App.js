@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import {
@@ -16,7 +17,8 @@ import { Header, Footer } from "./components"
 
 function App() {
     return (
-        <>
+        <Fragment>
+
             <Header />
             <Routes>
                 <Route path="/" element={<Signin />} />
@@ -33,7 +35,12 @@ function App() {
             <Footer
                 content
             />
-        </>
+
+
+        </Fragment>
+
+
+
     );
 }
 
