@@ -1,7 +1,7 @@
-import { Input, Button, SignupAlternative, Details } from "../../components";
-import email from "../../asset/img/email.png";
+import { Input, Button, SignupAlternative, Details } from "../components";
+import email from "../asset/img/email.png";
 
-const ForgotPassword = () => {
+export const ForgotPassword = () => {
     return (
         <main className="d-flex column justify-center align-items-center ash-bg">
             <div className="form__container d-flex column justify-center ">
@@ -46,5 +46,3 @@ const ForgotPassword = () => {
 
     );
 }
-
-export default ForgotPassword

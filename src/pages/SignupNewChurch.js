@@ -1,13 +1,13 @@
-import { Input, Button, SignupAlternative, Details } from "../../components";
-import home from "../../asset/img/church_signup_name.svg";
-import cancel from "../../asset/img/church_signup_name_cancel.png";
-import email from "../../asset/img/email.png";
-import view from "../../asset/img/password-view.png";
-import password from "../../asset/img/password.png";
-import churchHandle from "../../asset/img/church_signup_handle.png";
-import referral from "../../asset/img/referral.svg";
+import { Input, Button, SignupAlternative, Details } from "../components";
+import home from "../asset/img/church_signup_name.svg";
+import cancel from "../asset/img/church_signup_name_cancel.png";
+import email from "../asset/img/email.png";
+import view from "../asset/img/password-view.png";
+import password from "../asset/img/password.png";
+import churchHandle from "../asset/img/church_signup_handle.png";
+import referral from "../asset/img/referral.svg";
 
-const SignupNewChurch = () => {
+export const SignupNewChurch = () => {
     return (
         <main className="d-flex column justify-center align-items-center ash-bg">
             <div className="form__container d-flex column justify-center ">
@@ -95,5 +95,3 @@ const SignupNewChurch = () => {
         </main>
     );
 }
-
-export default SignupNewChurch

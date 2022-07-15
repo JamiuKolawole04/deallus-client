@@ -1,10 +1,10 @@
-import { AccountType, SignupAlternative, Details } from "../../components";
-import church1 from "../../asset/img/church.png";
-import church2 from "../../asset/img/orange-church.png";
-import churchStaff1 from "../../asset/img/men.png";
-import churchStaff2 from "../../asset/img/women.png";
+import { AccountType, SignupAlternative, Details } from "../components";
+import church1 from "../asset/img/church.png";
+import church2 from "../asset/img/orange-church.png";
+import churchStaff1 from "../asset/img/men.png";
+import churchStaff2 from "../asset/img/women.png";
 
-const Signup = () => {
+export const Signup = () => {
     return (
         <main className="d-flex column justify-center align-items-center ash-bg">
             <div className="form__container d-flex column justify-center ">
@@ -41,5 +41,3 @@ const Signup = () => {
     );
 
 }
-
-export default Signup

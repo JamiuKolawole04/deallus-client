@@ -10,19 +10,19 @@
 
 @font-face {
     font-family: "Product Sans";
-    src: url("./asset/fonts/product-sans/Product\ Sans\ Regular.woff2");
+    src: url("../asset/fonts/product-sans/Product\ Sans\ Regular.woff2");
     font-weight: 400;
 }
 
 @font-face {
     font-family: "Product Sans";
-    src: url("./asset/fonts/product-sans/Product\ Sans\ Bold.woff2");
+    src: url("../asset/fonts/product-sans/Product\ Sans\ Bold.woff2");
     font-weight: 700;
 }
 
 @font-face {
     font-family: "Circular Std";
-    src: url("./asset/fonts/Circular-Std-Font/Circular\ Std\ Font.woff2");
+    src: url("../asset/fonts/Circular-Std-Font/Circular\ Std\ Font.woff2");
 }
 
 :root {
@@ -45,23 +45,138 @@ body {
 
 /* HEADER 
 ================================== ============================================*/
-@import url("./components/Header/styles/header.css");
+@import url("../components/Header/styles/header.css");
 
-/* HOME
+/* HOME STARTS
 ================================ ================================================*/
-@import url("./pages/Home/style/home.css");
+main {
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+.form__container {
+    background-color: var(--col1);
+    margin: 0 auto;
+    max-width: 580px;
+    width: 100%;
+    border: 1px solid rgba(220, 229, 241, 0.6);
+    border-radius: 6px;
+    margin-top: 100px;
+    font-family: var(--sans);
+}
+
+.form__container>div:first-of-type {
+    padding: 32px 40px 40px 40px;
+}
+
+.form__container h1 {
+    text-transform: uppercase;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(220, 229, 241, 0.6);
+    padding-top: 16px;
+    padding-bottom: 20px;
+}
+
+.form__container p.form__text {
+    color: var(--col2);
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+.form__container p.form__subtext {
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--col3);
+    margin-top: 8px;
+    font-weight: 300;
+    margin-bottom: 36px;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+input[type="email"]::placeholder,
+input[type="url"]::placeholder {
+    color: rgba(220, 229, 241, 0.6);
+    opacity: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+span.dot {
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    background-color: var(--col4);
+    border-radius: 50%;
+}
+
+.details__link {
+    margin-top: 32px;
+}
+
+.details__link a {
+    margin-right: 8px;
+    margin-left: 8px;
+    color: var(--col4);
+    font-family: var(--sans);
+    font-size: 14px;
+}
+
+/* SIGNUP ENDS
+================================ ==================================================*/
 
 /* FOOTER
 =============================== ==================================================*/
-@import url("./components/Footer/style/footer.css");
+@import url("../components/Footer/style/footer.css");
 
 /* INPUT
 ================================ ===================================================*/
-@import url("./components/Input/style/input.css");
+@import url("../components/Input/style/input.css");
 
-/* SIGN UP
+/* SIGN UP STARTS
 =============================== =====================================================*/
-@import url("./pages/Signup/style/signup.css");
+.acc__type {
+    border: 1px solid rgba(220, 229, 241, 0.6);
+    padding: 24px 80px 40px 28px;
+    border-radius: 4px;
+    transition: transform .8s;
+
+}
+
+.acc__type:hover {
+    border: 2px solid #0B3FA8;
+    transform: scale(1.03);
+}
+
+.acc__type a>img:nth-of-type(2) {
+    margin-left: -8px;
+}
+
+.acc__type img {
+    width: 56px;
+}
+
+
+.acc__type p {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 8px;
+    /* width: 249px; */
+}
+
+p.acc__select {
+    font-size: 14px;
+    color: #2E394B;
+    margin-top: 64px;
+    margin-bottom: 40px;
+}
+
+/* SIGNUP ENDS
+======================================= ================================================*/
 
 button {
     color: var(--col1);

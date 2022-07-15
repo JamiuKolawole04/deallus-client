@@ -1,11 +1,11 @@
-import { Button, SignupAlternative, Details, Input } from "../../components";
+import { Button, SignupAlternative, Details, Input } from "../components";
 
-import user from "../../asset/img/user.svg";
-import cancel from "../../asset/img/cancel.png";
-import password from "../../asset/img/password.png";
-import view from "../../asset/img/password-view.png"
+import user from "../asset/img/user.svg";
+import cancel from "../asset/img/cancel.png";
+import password from "../asset/img/password.png";
+import view from "../asset/img/password-view.png"
 
-const Home = () => {
+export const Signin = () => {
     return (
         <main className="d-flex justify-center align-items-center column bg-wht">
             <div className="form__container d-flex column justify-center">
@@ -60,5 +60,3 @@ const Home = () => {
         </main>
     );
 }
-
-export default Home;

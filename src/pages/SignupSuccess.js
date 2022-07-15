@@ -1,7 +1,7 @@
-import signUpSuccessImg from "../../asset/img/signup_succes.png";
-import { Details } from "../../components";
+import signUpSuccessImg from "../asset/img/signup_succes.png";
+import { Details } from "../components";
 
-const SignupSuccessMsg = () => {
+export const SignupSuccessMsg = () => {
     return (
         <main className="ash-bg d-flex column justify-center align-items-center">
             <div className="form__container sucess-msg__container center-text">

@@ -1,5 +1,7 @@
-import { SelectPlan } from "../../components";
-const ChurchPlansAndPricing = () => {
+import { SelectPlan } from "../components";
+
+
+export const ChurchPlansAndPricing = () => {
     return (
         <main className="d-flex column align-items-center ash-bg church-plans__container">
             <p className="plans__text">Plans and Pricing</p>
@@ -23,5 +25,3 @@ const ChurchPlansAndPricing = () => {
         </main>
     );
 }
-
-export default ChurchPlansAndPricing

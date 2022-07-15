@@ -1,12 +1,12 @@
-import { Input, Button, Details, SignupAlternative } from "../../components";
-import userSignup1 from "../../asset/img/user-signup1.png";
-import userSignup2 from "../../asset/img/user-signup2.png";
-import email from "../../asset/img/email.png";
-import password from "../../asset/img/password.png";
-import view from "../../asset/img/password-view.png";
+import { Input, Button, Details, SignupAlternative } from "../components";
+import userSignup1 from "../asset/img/user-signup1.png";
+import userSignup2 from "../asset/img/user-signup2.png";
+import email from "../asset/img/email.png";
+import password from "../asset/img/password.png";
+import view from "../asset/img/password-view.png";
 
 
-const SignupNewStaff = () => {
+export const SignupNewStaff = () => {
     return (
         <main className="d-flex column justify-center align-items-center ash-bg">
             <div className="form__container d-flex column justify-center ">
@@ -79,5 +79,3 @@ const SignupNewStaff = () => {
         </main>
     );
 }
-
-export default SignupNewStaff;

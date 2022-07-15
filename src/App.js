@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import {
-    Home,
+    Signin,
     Signup,
     SignupNewChurch,
     SignupNewStaff,
@@ -19,8 +19,8 @@ function App() {
         <>
             <Header />
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/login" element={<Home />} />
+                <Route path="/" element={<Signin />} />
+                <Route path="/login" element={<Signin />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/signup/church" element={<SignupNewChurch />} />
                 <Route path="/signup/staff" element={<SignupNewStaff />} />

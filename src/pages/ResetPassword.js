@@ -1,8 +1,8 @@
-import { Input, Button, SignupAlternative, Details } from "../../components";
-import password from "../../asset/img/password.png";
-import view from "../../asset/img/password-view.png";
+import { Input, Button, SignupAlternative, Details } from "../components";
+import password from "../asset/img/password.png";
+import view from "../asset/img/password-view.png";
 
-const ResetPassword = () => {
+export const ResetPassword = () => {
     return (
         <main className="d-flex column justify-center align-items-center ash-bg">
             <div className="form__container d-flex column justify-center ">
@@ -55,5 +55,3 @@ const ResetPassword = () => {
 
     );
 }
-
-export default ResetPassword;

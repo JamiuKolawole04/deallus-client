@@ -1,10 +1,10 @@
-import { Input, Button, SignupAlternative, Details } from "../../components";
-import churchHandle from "../../asset/img/@.png";
-import complete from "../../asset/img/green_checkbox.svg";
-import founder from "../../asset/img/founder.png";
+import { Input, Button, SignupAlternative, Details } from "../components";
+import churchHandle from "../asset/img/@.png";
+import complete from "../asset/img/green_checkbox.svg";
+import founder from "../asset/img/founder.png";
 
 
-const SignupChurchDetails = () => {
+export const SignupChurchDetails = () => {
     return (
         <main className="d-flex justify-center align-items-center column ash-bg">
             <div className="form__container d-flex column justify-center">
@@ -51,5 +51,3 @@ const SignupChurchDetails = () => {
         </main>
     );
 }
-
-export default SignupChurchDetails
