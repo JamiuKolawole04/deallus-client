@@ -22,6 +22,12 @@ export const Signin = () => {
     if (number === "" || password === "") {
       return setErrorMessage("Fill all the required fields");
     }
+    if (number.length < 12) {
+      return setErrorMessage("Number length cannot be less than 12");
+    }
+    if (isNaN(number)) {
+      return setErrorMessage("please input a valid number");
+    }
     navigate("/plans", { replace: true });
   }, [number, password, navigate]);
 
@@ -48,12 +54,13 @@ export const Signin = () => {
               <img className="login__icon" src={user} alt="" />
             </button>
             <input
-              type="text"
-              name="number"
-              id="number"
+              type="tel"
+              name="phone"
+              id="phone"
               value={number}
               onChange={({ target }) => setNumber(target.value)}
               placeholder="+234 000 000 000"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}-[0-9]{3}"
               // ref={ref}
             />
             <button>
