@@ -6,3 +6,4 @@ export { default as Details } from "./Details";
 export { default as Footer } from "./Footer";
 export { default as AccountType } from "./AccountType";
 export { default as SelectPlan } from "./SelectPlan";
+export { default as NotFound } from "./NotFound";
