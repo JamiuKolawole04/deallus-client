@@ -33,7 +33,7 @@ export const ForgotPassword = () => {
     setEmail(e.target.value);
   };
   return (
-    <main className="d-flex column justify-center align-items-center ash-bg">
+    <main className="d-flex column  align-items-center ash-bg">
       <div className="form__container d-flex column justify-center ">
         <h1 className="center-text">forgot password</h1>
         <div>

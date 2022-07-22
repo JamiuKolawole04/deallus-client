@@ -21,7 +21,7 @@ export const SignupChurchDetails = () => {
   }, [churchHandle, navigate]);
 
   return (
-    <main className="d-flex justify-center align-items-center column ash-bg">
+    <main className="d-flex align-items-center column ash-bg">
       <div className="form__container d-flex column justify-center">
         <h1 className="center-text">sign up</h1>
         <div>

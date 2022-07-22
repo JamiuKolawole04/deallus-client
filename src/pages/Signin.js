@@ -42,7 +42,7 @@ export const Signin = () => {
   }
 
   return (
-    <main className="d-flex justify-center align-items-center column bg-wht">
+    <main className="d-flex  align-items-center column bg-wht">
       <div className="form__container d-flex column justify-center">
         <h1 className="center-text">sign in</h1>
         <div>

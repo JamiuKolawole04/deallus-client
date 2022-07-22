@@ -59,7 +59,7 @@ export const SignupNewChurch = () => {
   };
 
   return (
-    <main className="d-flex column justify-center align-items-center ash-bg">
+    <main className="d-flex column  align-items-center ash-bg">
       <div className="form__container d-flex column justify-center ">
         <h1 className="center-text">sign up</h1>
         <div>

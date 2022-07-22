@@ -3,7 +3,7 @@ import { Details } from "../components";
 
 export const SignupSuccessMsg = () => {
     return (
-        <main className="ash-bg d-flex column justify-center align-items-center">
+        <main className="ash-bg d-flex column align-items-center">
             <div className="form__container sucess-msg__container center-text">
                 <img src={signUpSuccessImg} alt="" />
                 <div>
