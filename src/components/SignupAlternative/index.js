@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 
-const SignupAlternative = ({ text, color, signup }) => {
+const SignupAlternative = ({ text, color, signup, help }) => {
     const style = {
         color: color,
         lineHeight: "24px",
@@ -24,7 +24,7 @@ const SignupAlternative = ({ text, color, signup }) => {
     return (
         <Link
             style={style}
-            to={signup ? "/signup" : "/login"}
+            to={signup ? "/signup" : help ? "/forgot-password" : "/login"}
         >
             {text}
         </Link>

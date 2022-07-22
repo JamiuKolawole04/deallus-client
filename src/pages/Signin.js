@@ -110,7 +110,11 @@ export const Signin = () => {
           </button>
 
           <div className="d-flex row justify-content-between mt-48">
-            <SignupAlternative color="#144979" text="I can't login, help me" />
+            <SignupAlternative
+              color="#144979"
+              text="I can't login, help me"
+              help
+            />
             <SignupAlternative
               color="#006BCE"
               text="Don't have an account? Sign up here"
