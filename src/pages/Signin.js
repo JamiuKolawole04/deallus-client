@@ -10,6 +10,7 @@ import view from "../asset/img/password-view.png";
 
 export const Signin = () => {
   const ref = useRef();
+  const ref2 = useRef();
   const navigate = useNavigate();
 
   const [number, setNumber] = useState("");
@@ -34,6 +35,11 @@ export const Signin = () => {
   useEffect(() => {
     setRefElement(ref.current);
   }, []);
+
+  const cancelNumber = () => {
+    setNumber("");
+    ref2.current.focus()
+  }
 
   return (
     <main className="d-flex justify-center align-items-center column bg-wht">
@@ -61,11 +67,11 @@ export const Signin = () => {
               onChange={({ target }) => setNumber(target.value)}
               placeholder="+234 000 000 000"
               pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}-[0-9]{3}"
-              // ref={ref}
+              ref={ref2}
             />
             <button>
               <img
-                // onClick={togggleShowPassword}
+                onClick={cancelNumber}
                 src={cancel}
                 className="cancel__icon"
                 alt=""
