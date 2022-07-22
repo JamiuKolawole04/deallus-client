@@ -40,7 +40,7 @@ const SelectPlan = ({
           Selecting this plan means that your <br /> yearly members and visitors
           are <br /> {range}
         </p>
-        <Button text="select plan" bgColor={bgColor} formFill />
+        <Button text="select plan" bgColor={bgColor} drShadow formFill />
       </div>
     </div>
   );

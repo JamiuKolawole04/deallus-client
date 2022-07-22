@@ -272,6 +272,8 @@ span.usermail {
     color: var(--col2);
 }
 
+
+
 .church-plans__container p.plans__text {
     color: #162338;
     font-family: var(--sans);
@@ -296,14 +298,16 @@ span.usermail {
     margin-bottom: 48px;
 }
 
-/* padding: 0 0 0 20px; */
 .church-plans__container>div>div {
     background-color: var(--col1);
     border: 1px solid rgba(220, 229, 241, 0.6);
     border-radius: 8px;
-    /* width: 457px; */
-    /* height: 527px; */
     font-family: var(--sans);
+    transition: transform .8s;
+}
+
+.church-plans__container>div>div:hover {
+    transform: scale(1.04);
 }
 
 .church-plans__container>div>div>div:first-of-type,
@@ -314,7 +318,6 @@ span.usermail {
 .church-plans__container>div>div>div:nth-of-type(3) {
     padding-bottom: 44px;
 }
-
 
 .border {
     border-bottom: 1px solid #DCE5F1;
