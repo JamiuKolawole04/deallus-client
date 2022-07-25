@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { SignupAlternative, Details } from "../components";
+import { SignupAlternative, Details, Input, Button } from "../components";
 import emailIcon from "../asset/img/email.png";
 
 export const ForgotPassword = () => {
@@ -10,7 +10,7 @@ export const ForgotPassword = () => {
   const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const validateFields = useCallback(() => {
+  const handleValidateForm = useCallback(() => {
     setErrorMessage("");
     if (email === "") {
       return setErrorMessage("please enter email");
@@ -23,7 +23,7 @@ export const ForgotPassword = () => {
     return /\S+@\S+\.\S+/.test(emailCheck);
   };
 
-  const handleChange = (e) => {
+  const handleEmail = (e) => {
     if (!isValidEmail(e.target.value)) {
       setEmail(e.target.value);
       return setErrorMessage("invalid email");
@@ -48,29 +48,27 @@ export const ForgotPassword = () => {
             </div>
           )}
           <div className="mb-48 mt-28">
-            <div className="input d-flex align-items-center">
-              <button>
-                <img src={emailIcon} className="email__icon" alt="" />
-              </button>
-              <input
-                type="text"
-                name="email"
-                id="email"
-                value={email}
-                onChange={handleChange}
-                // onChange={({ target }) => setEmail(target.value)}
-                placeholder="Email address"
-              />
-              <button>
-                <img src="" alt="" />
-              </button>
-            </div>
+            <Input
+              type="email"
+              name="email"
+              value={email}
+              placeholder="Email address"
+              preffixModifyWidth="16"
+              prefix={emailIcon}
+              handleChange={handleEmail}
+            />
           </div>
 
           <div className="mt-28 mb-48">
-            <button className="validation__btn" onClick={validateFields}>
-              SEND RESET LINK
-            </button>
+
+            <Button
+              text="SEND RESET LINK"
+              formFill
+              bgColor="#0B3FA8"
+              errorMessage={errorMessage}
+              setErrorMessage={setErrorMessage}
+              validateForm={handleValidateForm}
+            />
           </div>
 
           <div className="d-flex row justify-content-between mt-48">

@@ -1,8 +1,7 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { Details, SignupAlternative } from "../components";
-import { togggleShowPassword } from "../utils/toggleShowPassword";
+import { Details, SignupAlternative, Input } from "../components";
 import userSignup1 from "../asset/img/user-signup1.png";
 import userSignup2 from "../asset/img/user-signup2.png";
 import emailIcon from "../asset/img/email.png";
@@ -20,7 +19,8 @@ export const SignupNewStaff = () => {
   const [lastName, setLastName] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const validateFields = useCallback(() => {
+
+  const handleValidateForm = useCallback(() => {
     setErrorMessage("");
     if (
       email === "" ||
@@ -43,11 +43,22 @@ export const SignupNewStaff = () => {
     navigate("/plans", { replace: true });
   }, [email, password, firstName, lastName, navigate]);
 
+
+
+  const handleFirstName = ({ target }) => {
+    setFirstName(target.value)
+  }
+  const handleLastName = ({ target }) => {
+    setLastName(target.value)
+  }
+  const handlePassword = ({ target }) => {
+    setPassword(target.value)
+  }
   const isValidEmail = (emailCheck) => {
     return /\S+@\S+\.\S+/.test(emailCheck);
   };
 
-  const handleChange = (e) => {
+  const handleEmail = (e) => {
     if (!isValidEmail(e.target.value)) {
       setEmail(e.target.value);
       return setErrorMessage("invalid email");
@@ -75,87 +86,53 @@ export const SignupNewStaff = () => {
           )}
           <div className="d-flex row justify-content-between align-items-center">
             <div className="fx-g-1">
-              <div className="input d-flex align-items-center">
-                <button>
-                  <img src={userSignup1} alt="" />
-                </button>
-                <input
-                  type="text"
-                  name="firstName"
-                  id="firstName"
-                  value={firstName}
-                  onChange={({ target }) => setFirstName(target.value)}
-                  placeholder="Oluatobi"
-                />
-                <button>
-                  <img src="" alt="" />
-                </button>
-              </div>
+              <Input
+                type="text"
+                name="firstName"
+                value={firstName}
+                placeholder="Oluwatobi"
+                prefix={userSignup1}
+                handleChange={handleFirstName}
+              />
             </div>
 
             <div className="fx-g-1 ml-12">
-              <div className="input d-flex align-items-center">
-                <button>
-                  <img src={userSignup2} alt="" />
-                </button>
-                <input
-                  type="text"
-                  name="lastName"
-                  id="lastName"
-                  value={lastName}
-                  onChange={({ target }) => setLastName(target.value)}
-                  placeholder="Last name"
-                />
-                <button>
-                  <img src="" alt="" />
-                </button>
-              </div>
+              <Input
+                type="text"
+                name="lastName"
+                value={lastName}
+                prefix={userSignup2}
+                handleChange={handleLastName}
+              />
             </div>
           </div>
           <div className="mt-28">
-            <div className="input d-flex align-items-center">
-              <button>
-                <img src={emailIcon} className="email__icon" alt="" />
-              </button>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                value={email}
-                onChange={handleChange}
-                placeholder="Email"
-              />
-              <button>
-                <img src="" alt="" />
-              </button>
-            </div>
+            <Input
+              type="email"
+              name="email"
+              value={email}
+              prefix={emailIcon}
+              preffixModifyWidth="16"
+              handleChange={handleEmail}
+            />
           </div>
           <div className="mt-28">
-            <div className="input d-flex align-items-center">
-              <button>
-                <img src={passwordIcon} className="password__icon" alt="" />
-              </button>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                value={password}
-                onChange={({ target }) => setPassword(target.value)}
-                placeholder="Choose a password"
-                ref={ref}
-              />
-              <button>
-                <img
-                  className="passwordView__icon "
-                  onClick={() => togggleShowPassword(refElement)}
-                  src={view}
-                  alt=""
-                />
-              </button>
-            </div>
+            <Input
+              type="password"
+              name="password"
+              value={password}
+              prefix={passwordIcon}
+              suffix={view}
+              preffixModifyWidth="12"
+              suffixModifyWidth
+              handleChange={handlePassword}
+              Ref={ref}
+              refElement={refElement}
+
+            />
           </div>
           <div className="mt-48">
-            <button className="validation__btn" onClick={validateFields}>
+            <button className="validation__btn" onClick={handleValidateForm}>
               submit and get started
             </button>
           </div>

@@ -1,8 +1,7 @@
 import { useRef, useCallback, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { SignupAlternative, Details } from "../components";
-import { togggleShowPassword } from "../utils/toggleShowPassword";
+import { SignupAlternative, Details, Input, Button } from "../components";
 import passwordIcon from "../asset/img/password.png";
 import view from "../asset/img/password-view.png";
 
@@ -20,9 +19,9 @@ export const ResetPassword = () => {
   useEffect(() => {
     setRefElement(ref.current);
     setRefElement2(ref2.current);
-  }, []);
+  }, [setRefElement, setRefElement2]);
 
-  const validateFields = useCallback(() => {
+  const handleValidateForm = useCallback(() => {
     setErrorMessage("");
     if (newPassword === "" || confirmPassword === "") {
       return setErrorMessage("Passwords must be present");
@@ -36,6 +35,14 @@ export const ResetPassword = () => {
 
     navigate("/plans", { replace: true });
   }, [navigate, newPassword, confirmPassword]);
+
+  const handleNewPassword = ({ target }) => {
+    setNewPassword(target.value)
+  }
+
+  const handleConfirmPassword = ({ target }) => {
+    setConfirmPassword(target.value)
+  }
 
   return (
     <main className="d-flex column align-items-center ash-bg">
@@ -52,55 +59,47 @@ export const ResetPassword = () => {
               <p>{errorMessage}</p>
             </div>
           )}
-          <div className="input d-flex align-items-center">
-            <button>
-              <img src={passwordIcon} className="password__icon" alt="" />
-            </button>
-            <input
-              type="password"
-              name="newPassword"
-              id="newPassword"
-              value={newPassword}
-              onChange={({ target }) => setNewPassword(target.value)}
-              placeholder="New password"
-              ref={ref}
-            />
-            <button>
-              <img
-                className="passwordView__icon"
-                onClick={() => togggleShowPassword(refElement)}
-                src={view}
-                alt=""
-              />
-            </button>
-          </div>
+          <Input
+            type="password"
+            name="newPassword"
+            value={newPassword}
+            placeholder="New password"
+            prefix={passwordIcon}
+            suffix={view}
+            preffixModifyWidth="12"
+            suffixModifyWidth
+            Ref={ref}
+            refElement={refElement}
+            handleChange={handleNewPassword}
+
+          />
           <div className="mt-28 mb-48">
-            <div className="input d-flex align-items-center">
-              <button>
-                <img src={passwordIcon} className="password__icon" alt="" />
-              </button>
-              <input
-                type="password"
-                name="confirmPassword"
-                id="confirmPassword"
-                value={confirmPassword}
-                onChange={({ target }) => setConfirmPassword(target.value)}
-                placeholder="Confirm new password"
-                ref={ref2}
-              />
-              <button>
-                <img
-                  className="passwordView__icon"
-                  onClick={() => togggleShowPassword(refElement2)}
-                  src={view}
-                  alt=""
-                />
-              </button>
-            </div>
+            <Input
+              type="password"
+              name="confirmPassword"
+              value={confirmPassword}
+              placeholder="New password"
+              prefix={passwordIcon}
+              suffix={view}
+              preffixModifyWidth="12"
+              suffixModifyWidth
+              Ref={ref2}
+              refElement2={refElement2}
+              handleChange={handleConfirmPassword}
+
+            />
           </div>
-          <button className="validation__btn" onClick={validateFields}>
+          {/* <button className="validation__btn" onClick={validateFields}>
             confirm password reset
-          </button>
+          </button> */}
+          <Button
+            text="log in"
+            formFill
+            bgColor="#0B3FA8"
+            errorMessage={errorMessage}
+            setErrorMessage={setErrorMessage}
+            validateForm={handleValidateForm}
+          />
           <div className="d-flex row justify-content-between mt-48">
             <SignupAlternative color="#144979" text="Sign In" />
             <SignupAlternative

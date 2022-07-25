@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { SignupAlternative, Details } from "../components";
+import { SignupAlternative, Details, Input, Button } from "../components";
 import churchHandleIcon from "../asset/img/@.png";
 import checked from "../asset/img/green_checkbox.svg";
 import founder from "../asset/img/founder.png";
@@ -12,13 +12,20 @@ export const SignupChurchDetails = () => {
   const [churchHandle, setChurchHandle] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const validateFields = useCallback(() => {
+  const handleValidateForm = useCallback(() => {
     setErrorMessage("");
     if (churchHandle === "") {
       return setErrorMessage("Church handle is required");
     }
+    if (churchHandle.length < 3) {
+      return setErrorMessage("Church handle can't be less than 3 characters")
+    }
     navigate("/plans", { replace: true });
   }, [churchHandle, navigate]);
+
+  const handleChurchHandle = ({ target }) => {
+    setChurchHandle(target.value)
+  }
 
   return (
     <main className="d-flex align-items-center column ash-bg">
@@ -35,27 +42,16 @@ export const SignupChurchDetails = () => {
               <p>{errorMessage}</p>
             </div>
           )}
-          <div className="input d-flex align-items-center">
-            <button className="pr">
-              <img
-                src={churchHandleIcon}
-                className="churchHandle__icon"
-                alt=""
-              />
-            </button>
-            <input
-              type="url"
-              name="handle"
-              id="handle"
-              value={churchHandle}
-              onChange={({ target }) => setChurchHandle(target.value)}
-              // onChange={handleChange}
-              placeholder="DeallusChurch"
-            />
-            <button>
-              <img src={checked} className="login__icon" alt="" />
-            </button>
-          </div>
+          <Input
+            type="url"
+            name="handle"
+            prefix={churchHandleIcon}
+            suffix={checked}
+            preffixModifyWidth
+            suffixModifyWidth
+            value={churchHandle}
+            handleChange={handleChurchHandle}
+          />
           <div className="d-flex align-items-center row church__info">
             <img src={founder} alt="" />
             <div className="ml-24">
@@ -64,9 +60,14 @@ export const SignupChurchDetails = () => {
               <address>Ikeja, Lagos, Nigeria</address>
             </div>
           </div>
-          <button className="validation__btn" onClick={validateFields}>
-            proceed
-          </button>
+          <Button
+            text="log in"
+            formFill
+            bgColor="#0B3FA8"
+            errorMessage={errorMessage}
+            setErrorMessage={setErrorMessage}
+            validateForm={handleValidateForm}
+          />
           <div className="mt-28">
             <SignupAlternative
               color="#006BCE"
