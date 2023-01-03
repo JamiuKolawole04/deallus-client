@@ -1,0 +1,363 @@
+@charset "utf-8";
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Product Sans";
+    src: url("../asset/fonts/product-sans/Product\ Sans\ Regular.woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Product Sans";
+    src: url("../asset/fonts/product-sans/Product\ Sans\ Bold.woff2");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Circular Std";
+    src: url("../asset/fonts/Circular-Std-Font/Circular\ Std\ Font.woff2");
+}
+
+:root {
+    --col1: #ffffff;
+    --col2: #0B3FA8;
+    --col3: #64758F;
+    --col4: #5F7CA8;
+    --sans: "Product Sans";
+    --std: "Circular Std";
+    --mainTransition: all 0.3s linear;
+}
+
+body {
+    background-color: #f6f9ff;
+}
+
+/* GLOBAL STYLE
+================================== ============================================*/
+@import url("./global.css");
+
+/* HEADER 
+================================== ============================================*/
+@import url("../components/Header/styles/header.css");
+
+/* HOME STARTS
+================================ ================================================*/
+main {
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+.form__container {
+    background-color: var(--col1);
+    margin: 0 auto;
+    max-width: 580px;
+    width: 100%;
+    border: 1px solid rgba(220, 229, 241, 0.6);
+    border-radius: 6px;
+    margin-top: 80px;
+    font-family: var(--sans);
+}
+
+.form__container>div:first-of-type {
+    padding: 32px 40px 40px 40px;
+}
+
+.form__container h1 {
+    text-transform: uppercase;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(220, 229, 241, 0.6);
+    padding-top: 16px;
+    padding-bottom: 20px;
+}
+
+.form__container p.form__text {
+    color: var(--col2);
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+.form__container p.form__subtext {
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--col3);
+    margin-top: 8px;
+    font-weight: 300;
+    margin-bottom: 36px;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+input[type="email"]::placeholder,
+input[type="url"]::placeholder {
+    color: rgba(220, 229, 241, 0.6);
+    opacity: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+span.dot {
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    background-color: var(--col4);
+    border-radius: 50%;
+}
+
+.details__link {
+    margin-top: 32px;
+}
+
+.details__link a {
+    margin-right: 8px;
+    margin-left: 8px;
+    color: var(--col4);
+    font-family: var(--sans);
+    font-size: 14px;
+}
+
+/* SIGNUP ENDS
+================================ ==================================================*/
+
+/* FOOTER
+=============================== ==================================================*/
+@import url("../components/Footer/style/footer.css");
+
+/* INPUT
+================================ ===================================================*/
+@import url("../components/Input/style/input.css");
+
+/* SIGN UP STARTS
+=============================== =====================================================*/
+.acc__type {
+    border: 1px solid rgba(220, 229, 241, 0.6);
+    padding: 24px 80px 40px 28px;
+    border-radius: 4px;
+    transition: transform .8s;
+
+}
+
+.acc__type:hover {
+    border: 2px solid #0B3FA8;
+    transform: scale(1.03);
+}
+
+.acc__type a>img:nth-of-type(2) {
+    margin-left: -8px;
+}
+
+.acc__type img {
+    width: 56px;
+}
+
+
+.acc__type p {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 8px;
+    /* width: 249px; */
+}
+
+p.acc__select {
+    font-size: 14px;
+    color: #2E394B;
+    margin-top: 64px;
+    margin-bottom: 40px;
+}
+
+/* SIGNUP ENDS
+======================================= ================================================*/
+
+button {
+    color: var(--col1);
+    text-align: center;
+    height: 40px;
+    font-size: 14px;
+    font-family: var(--sans);
+    line-height: 24px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+p#referral_id {
+    font-size: 12px;
+    font-family: var(--sans);
+    line-height: 22px;
+    color: #052949;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+div#members__info {
+    margin-top: 8px;
+}
+
+div#members__info p {
+    left: 358px;
+    background-color: #FE8F29;
+    border-radius: 6px 0 0 6px;
+    width: 180px;
+    color: var(--col1);
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 700;
+    padding: 14px 0 14px 12px;
+}
+
+p#church__handle {
+    color: #53565C;
+    line-height: 22px;
+    font-family: var(--sans);
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.church__info {
+    border: 1px solid rgba(220, 229, 241, 0.6);
+    margin-top: 36px;
+    margin-bottom: 52px;
+}
+
+.church__info img {
+    width: 140px;
+}
+
+.church__info>div>p:nth-of-type(1),
+.church__info>div>p:nth-of-type(2) {
+    font-weight: 700;
+    font-family: var(--sans);
+}
+
+.church__info>div>p:nth-of-type(1) {
+    color: #062460;
+    line-height: 32px;
+    font-size: 16px;
+}
+
+.church__info>div>p:nth-of-type(2) {
+    color: #1A4165;
+    line-height: 12px;
+    font-family: var(--sans);
+    font-size: 12px;
+}
+
+.church__info>div>address {
+    font-style: normal;
+    line-height: 24px;
+    color: #1A4165;
+    font-size: 12px;
+}
+
+.sucess-msg__container img {
+    margin-top: 120px;
+    width: 80px;
+}
+
+.sucess-msg__container>div>p:first-of-type {
+    color: #24457A;
+}
+
+span.usermail {
+    color: var(--col2);
+}
+
+
+
+.church-plans__container p.plans__text {
+    color: #162338;
+    font-family: var(--sans);
+    margin-top: 80px;
+    font-size: 28px;
+    line-height: 49px;
+}
+
+.church-plans__container p.plans__subtext {
+    color: #7A8BA6;
+    font-family: var(--sans);
+    font-size: 16px;
+}
+
+.church-plans__container>div:first-of-type {
+    width: 100%;
+    max-width: 1080px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-gap: 40px;
+    margin-top: 80px;
+    margin-bottom: 48px;
+}
+
+.church-plans__container>div>div {
+    background-color: var(--col1);
+    border: 1px solid rgba(220, 229, 241, 0.6);
+    border-radius: 8px;
+    font-family: var(--sans);
+    transition: transform .8s;
+}
+
+.church-plans__container>div>div:hover {
+    transform: scale(1.04);
+}
+
+.church-plans__container>div>div>div:first-of-type,
+.church-plans__container>div>div>div:nth-of-type(3) {
+    padding: 40px 36px 28px 40px;
+}
+
+.church-plans__container>div>div>div:nth-of-type(3) {
+    padding-bottom: 44px;
+}
+
+.border {
+    border-bottom: 1px solid #DCE5F1;
+}
+
+.plan__cards h5 {
+    color: #162338;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.plan__cards img {
+    width: 16px;
+}
+
+.plans__content>div>div>p:nth-of-type(1) {
+    color: #556277;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 12px;
+}
+
+.plans__content>div>div>p:nth-of-type(2) {
+    color: var(--col2);
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 36px;
+
+}
+
+.plans__content>div>div>p:nth-of-type(3) {
+    color: #7A8BA6;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.plans__content>p:first-of-type {
+    color: #4A5565;
+    line-height: 16px;
+    font-size: 14px;
+    margin-top: 28px;
+    margin-bottom: 32px;
+}

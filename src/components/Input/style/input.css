@@ -1,0 +1,93 @@
+.input {
+    position: relative;
+}
+
+.pr {
+    border-right: 2px solid red;
+}
+
+.input>button {
+    cursor: none;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    height: 32px;
+    padding: 0;
+    position: absolute;
+    margin-left: 20px;
+}
+
+.input>button:first-of-type {
+    width: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.err {
+    background-color: orange;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 12px;
+}
+
+.err p {
+    font-size: 12px;
+}
+
+img.login__icon,
+img.email__icon {
+    width: 16px;
+}
+
+img.church__icon {
+    width: 20px;
+}
+
+img.password__icon {
+    width: 12px;
+}
+
+img.churchHandle__icon,
+img.referral__icon {
+    width: 14px;
+}
+
+
+img.passwordView__icon {
+    width: 18px;
+}
+
+img.cancel__icon {
+    width: 12px;
+}
+
+.input>button:nth-of-type(2) {
+    right: 32px;
+}
+
+.input>input {
+    background-color: var(--col1);
+    color: var(--col2);
+    border: 1px solid rgba(220, 229, 241, 0.6);
+    transition: width 0.5s;
+    height: 16px;
+    font-size: 12px;
+    border-radius: 4px;
+    padding: 24px 20px 24px 60px;
+    opacity: 1;
+    width: 100%;
+    outline: none;
+}
+
+.input>input:focus {
+    border-color: var(--col2);
+    border-width: 1.5px;
+}
+
+.validation__btn {
+    background-color: var(--col2);
+    width: 100%;
+    border: 1pt solid var(--col2);
+}
